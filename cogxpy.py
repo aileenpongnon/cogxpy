@@ -9,15 +9,16 @@ from tkinter.filedialog import askopenfilename
        # with the label text appearing in it
 root = Tk()
 
+# frame = Frame(root, width = 600, height = 350)
+# frame.pack()
+
 def loadFile():
     print("Loading the file...")
 
-       # creates a label on the screen
        # want this to be the loading button
 buttonLoad = Button(root, text = "Load File", command = loadFile)
-buttonLoad.pack()
+#buttonLoad.pack()
 labelOutput = Label(root, text = "Output: ")
-
 
 entryLoad = Entry(root)
 entryOutput = Entry(root)
@@ -27,7 +28,7 @@ labelOutput.grid(row = 1)
 
 entryLoad.grid(row = 0, column = 1)
 entryOutput.grid(row = 1, column = 1)
-# label.pack()
+#labelOutput.pack()
 
 root.mainloop()
 
