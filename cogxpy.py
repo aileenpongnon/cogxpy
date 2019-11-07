@@ -5,9 +5,9 @@
 from tkinter import *
 from tkinter.filedialog import askopenfilename
 
-       # creates a blank window named "root" from Tk class
-       # with the label text appearing in it
+# creates window from Tk class, titled CogxPy
 root = Tk()
+root.title('CogxPy')
 
 # modifying position of frame on the screen
 root.geometry("+500+250")
