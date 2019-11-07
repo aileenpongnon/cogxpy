@@ -17,7 +17,6 @@ def loadFile():
 
        # want this to be the loading button
 buttonLoad = Button(root, text = "Load File", command = loadFile)
-#buttonLoad.pack()
 labelOutput = Label(root, text = "Output: ")
 
 entryLoad = Entry(root)
@@ -28,10 +27,8 @@ labelOutput.grid(row = 1)
 
 entryLoad.grid(row = 0, column = 1)
 entryOutput.grid(row = 1, column = 1)
-#labelOutput.pack()
 
 root.mainloop()
-
 
 # root = Tk()
 # ftypes = [('csv file',"*.csv")]
