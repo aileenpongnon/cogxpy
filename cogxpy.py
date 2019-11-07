@@ -10,10 +10,7 @@ from tkinter.filedialog import askopenfilename
 root = Tk()
 
 # modifying position of frame on the screen
-root.geometry("+500+400")
-
-frame = Frame(root, width = 600, height = 350)
-# frame.pack()
+root.geometry("+500+250")
 
 def loadFile():
     print("Loading the file...")
@@ -26,11 +23,11 @@ entryLoad = Entry(root)
 # want this to be input from code instead
 entryOutput = Entry(root)
 
-buttonLoad.grid(row = 0)
+buttonLoad.grid(row = 0, padx = 50, pady = 100)
 labelOutput.grid(row = 1)
 
-entryLoad.grid(row = 0, column = 1)
-entryOutput.grid(row = 1, column = 1)
+entryLoad.grid(row = 0, column = 1, padx = 50)
+entryOutput.grid(row = 1, column = 1, pady = 100)
 
 root.mainloop()
 
