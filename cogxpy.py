@@ -9,7 +9,7 @@ from tkinter.filedialog import askopenfilename
        # with the label text appearing in it
 root = Tk()
 
-# frame = Frame(root, width = 600, height = 350)
+frame = Frame(root, width = 600, height = 350)
 # frame.pack()
 
 def loadFile():
