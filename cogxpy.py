@@ -35,10 +35,3 @@ entryLoad.grid(row = 0, column = 1, padx = 50)
 entryOutput.grid(row = 1, column = 1, pady = 100)
 
 root.mainloop()
-
-# root = Tk()
-# ftypes = [('csv file',"*.csv")]
-# ttl = "Title"
-# dir1 = 'C:\\'
-# root.fileName = askopenfilename(filetypes = ftypes, initialdir = dir1, title = ttl)
-# print(root.fileName)
