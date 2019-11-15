@@ -46,11 +46,19 @@ def turnRight():
         "> Recall how to turn right\n"
         "> Verify the car turned right\n")
 
+# file operations
+def viewFile(tasks):
+    # open the file
+    handle = open(tasks, "r")
+    print("Successfully openend file " + tasks)
+    # reading & printing the contents of the file
+    contents = handle.read()
+    print(contents)
+    # closing the file
+    handle.close()
 # read in file name
 # decipher elements in the file (all tasks)
 # put those tasks into a conclusvive array
 
-gasPedal()
-brakePedal()
-turnLeft()
-turnRight()
+tasksFile = input('Enter the filename: ')
+viewFile(tasksFile)
