@@ -19,11 +19,14 @@ def loadFile():
     print("Loading the file...")
     root.filename = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = ftypes)
     print(root.filename)
+    displayFilename(root.filename)
+
+def displayFilename(filename):
+    filename = entryLoad.insert(0, filename)
 
        # want this to be the loading button
 buttonLoad = Button(root, text = "Load File", command = loadFile)
 labelOutput = Label(root, text = "Output: ")
-# labelLoad = Label(root, text = ".csv")
 
 entryLoad = Entry(root)
 # want this to be input from code instead
