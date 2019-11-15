@@ -24,7 +24,10 @@ def loadFile():
 def displayFilename(filename):
     filename = entryLoad.insert(0, filename)
 
-       # want this to be the loading button
+def displayOutput():
+    answer = 0.00
+    outputVal = entryOutput.insert(0, answer)
+
 buttonLoad = Button(root, text = "Load File", command = loadFile)
 labelOutput = Label(root, text = "Output: ")
 
@@ -37,5 +40,6 @@ labelOutput.grid(row = 1)
 
 entryLoad.grid(row = 0, column = 1, padx = 50)
 entryOutput.grid(row = 1, column = 1, pady = 100)
+displayOutput()
 
 root.mainloop()
