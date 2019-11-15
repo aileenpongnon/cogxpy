@@ -1,6 +1,6 @@
 # Aileen Pongnon
 # CogxPy Project
-# October 29, 2019  - November 15, 2019 
+# October 29, 2019  - November 15, 2019
 
 from tkinter import *
 from tkinter import filedialog
@@ -23,6 +23,7 @@ def loadFile():
        # want this to be the loading button
 buttonLoad = Button(root, text = "Load File", command = loadFile)
 labelOutput = Label(root, text = "Output: ")
+# labelLoad = Label(root, text = ".csv")
 
 entryLoad = Entry(root)
 # want this to be input from code instead
