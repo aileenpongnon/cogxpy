@@ -4,4 +4,4 @@ merging <i><a href = "https://github.com/Cogulator/Cogulator">Cogulator</a></i> 
 
 # translate
 
-reading in a series of tasks from a .csv or .txt file and output them in the Cogulator format.
+reading in a series of tasks from a <a href = "https://en.wikipedia.org/wiki/Comma-separated_values"><i>.csv</a></i> or .txt file and output them in the <a href = "https://github.com/Cogulator/Cogulator">Cogulator</a></i> format.
