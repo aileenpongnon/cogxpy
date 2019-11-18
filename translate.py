@@ -51,14 +51,18 @@ def viewFile(tasks):
     # open the file
     handle = open(tasks, "r")
     print("Successfully openend file " + tasks)
-    # reading & printing the contents of the file
-    contents = handle.read()
-    print(contents)
+    printContents(handle)
     # closing the file
     handle.close()
-# read in file name
+
+# reading & printing the contents of the file
+def printContents(fileHandle):
+    contents = fileHandle.read()
+    print(contents)
+
 # decipher elements in the file (all tasks)
 # put those tasks into a conclusvive array
 
+# retrieving the file from the user
 tasksFile = input('Enter the filename: ')
 viewFile(tasksFile)
