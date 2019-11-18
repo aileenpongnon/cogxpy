@@ -2,6 +2,8 @@
 # CogxPy Project
 # November 15, 2019 -
 
+import csv
+
 # createStates
 def detection():
     print("CreateState Detection isActive")
@@ -51,17 +53,25 @@ def viewFile(tasks):
     # open the file
     handle = open(tasks, "r")
     print("Successfully openend file " + tasks)
-    printContents(handle)
+    # printContents(handle)
+    decipher(handle)
     # closing the file
     handle.close()
 
 # reading & printing the contents of the file
-def printContents(fileHandle):
-    contents = fileHandle.read()
-    print(contents)
+# def printContents(fileHandle):
+#     contents = fileHandle.read()
+#     print(contents)
 
 # decipher elements in the file (all tasks)
-# put those tasks into a conclusvive array
+def decipher(fileHandle):
+    reader = csv.reader(fileHandle)
+    taskList = list(reader)
+    print(taskList)
+
+    # printing each element in the list
+    for i in range(len(taskList)):
+        print(taskList[i])
 
 # retrieving the file from the user
 tasksFile = input('Enter the filename: ')
