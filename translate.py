@@ -26,6 +26,7 @@ def gasPedal():
     "> Think of pressing the gas pedal\n"
     "> Recall using right foot to press the gas pedal\n"
     "> Verify gas was pressed by movement in the car\n")
+    return
 
 def brakePedal():
     print("Goal: Press Brake Pedal\n"
@@ -65,13 +66,25 @@ def viewFile(tasks):
 
 # decipher elements in the file (all tasks)
 def decipher(fileHandle):
-    reader = csv.reader(fileHandle)
-    taskList = list(reader)
+    # reader = csv.reader(fileHandle)
+
+    # read in contents from file into a string
+    contents = fileHandle.read()
+
+    # place each string in a position in list
+    taskList = list(contents.split(", "))
     print(taskList)
 
-    # printing each element in the list
+    # traverse through list to redirect to appropriate fct
     for i in range(len(taskList)):
-        print(taskList[i])
+        if(taskList[i] == "gas"):
+            gasPedal()
+        elif(taskList[i] == "brake"):
+            brakePedal()
+        elif(taskList[i] == "left"):
+            turnLeft()
+        elif(taskList[i] == "right"):
+            turnRight()
 
 # retrieving the file from the user
 tasksFile = input('Enter the filename: ')
