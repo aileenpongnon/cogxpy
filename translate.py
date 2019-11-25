@@ -72,7 +72,7 @@ def decipher(fileHandle):
 
     # place each string in a position in list
     taskList = list(contents.split(", "))
-    print(taskList)
+    # print(taskList)
 
     # traverse through list to redirect to appropriate fct
     for i in range(len(taskList)):
