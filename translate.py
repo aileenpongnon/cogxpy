@@ -43,7 +43,7 @@ def turnLeft():
     "> Verify the car turned left\n")
 
 def turnRight():
-        print("Goal: Turn Left\n"
+        print("Goal: Turn Right\n"
         "> Look at road environment\n"
         "> Think of turning right\n"
         "> Recall how to turn right\n"
@@ -66,10 +66,9 @@ def viewFile(tasks):
 
 # decipher elements in the file (all tasks)
 def decipher(fileHandle):
-    # reader = csv.reader(fileHandle)
-
     # read in contents from file into a string
-    contents = fileHandle.read()
+    contents = fileHandle.readline()
+    contents = contents.rstrip('\n')
 
     # place each string in a position in list
     taskList = list(contents.split(", "))
