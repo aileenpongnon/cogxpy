@@ -3,6 +3,7 @@
 # November 15, 2019 -
 
 import csv
+import cogxpy as cp
 
 # createStates
 def detection():
@@ -86,5 +87,10 @@ def decipher(fileHandle):
             turnRight()
 
 # retrieving the file from the user
-tasksFile = input('Enter the filename: ')
+# tasksFile = input('Enter the filename: ')
+
+# importing function from cogxpy file to retrieve filename
+
+print(root.filename)
+tasksFile = root.filename
 viewFile(tasksFile)
