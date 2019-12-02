@@ -4,7 +4,7 @@
 
 from tkinter import *
 from tkinter import filedialog
-import translate as tl
+from translate import viewFile
 
 # creates window from Tk class, titled CogxPy
 root = Tk()
@@ -21,7 +21,7 @@ def loadFile():
     root.filename = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = ftypes)
     print(root.filename)
     displayFilename(root.filename)
-    viewFile(filename)
+    viewFile(root.filename)
 
 def displayFilename(filename):
     filename = entryLoad.insert(0, filename)
