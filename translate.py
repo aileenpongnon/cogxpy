@@ -3,7 +3,45 @@
 # November 15, 2019 -
 
 import csv
-import cogxpy as cp
+
+# file operations
+def viewFile(tasks):
+    # open the file
+    handle = open(tasks, "r")
+    print("Successfully openend file " + tasks)
+    # printContents(handle)
+    decipher(handle)
+    # closing the file
+    handle.close()
+
+# reading & printing the contents of the file
+# def printContents(fileHandle):
+#     contents = fileHandle.read()
+#     print(contents)
+
+# decipher elements in the file (all tasks)
+def decipher(fileHandle):
+    # read in contents from file into a string
+    contents = fileHandle.readline()
+    contents = contents.rstrip('\n')
+
+    # place each string in a position in list
+    taskList = list(contents.split(", "))
+    # print(taskList)
+
+    # traverse through list to redirect to appropriate fct
+    for i in range(len(taskList)):
+        if(taskList[i] == "gas"):
+            gasPedal()
+        elif(taskList[i] == "brake"):
+            brakePedal()
+        elif(taskList[i] == "left"):
+            turnLeft()
+        elif(taskList[i] == "right"):
+            turnRight()
+
+    print("Complete.")
+    quit()
 
 # createStates
 def detection():
@@ -44,53 +82,8 @@ def turnLeft():
     "> Verify the car turned left\n")
 
 def turnRight():
-        print("Goal: Turn Right\n"
-        "> Look at road environment\n"
-        "> Think of turning right\n"
-        "> Recall how to turn right\n"
-        "> Verify the car turned right\n")
-
-# file operations
-def viewFile(tasks):
-    # open the file
-    handle = open(tasks, "r")
-    print("Successfully openend file " + tasks)
-    # printContents(handle)
-    decipher(handle)
-    # closing the file
-    handle.close()
-
-# reading & printing the contents of the file
-# def printContents(fileHandle):
-#     contents = fileHandle.read()
-#     print(contents)
-
-# decipher elements in the file (all tasks)
-def decipher(fileHandle):
-    # read in contents from file into a string
-    contents = fileHandle.readline()
-    contents = contents.rstrip('\n')
-
-    # place each string in a position in list
-    taskList = list(contents.split(", "))
-    # print(taskList)
-
-    # traverse through list to redirect to appropriate fct
-    for i in range(len(taskList)):
-        if(taskList[i] == "gas"):
-            gasPedal()
-        elif(taskList[i] == "brake"):
-            brakePedal()
-        elif(taskList[i] == "left"):
-            turnLeft()
-        elif(taskList[i] == "right"):
-            turnRight()
-
-# retrieving the file from the user
-# tasksFile = input('Enter the filename: ')
-
-# importing function from cogxpy file to retrieve filename
-
-print(root.filename)
-tasksFile = root.filename
-viewFile(tasksFile)
+    print("Goal: Turn Right\n"
+    "> Look at road environment\n"
+    "> Think of turning right\n"
+    "> Recall how to turn right\n"
+    "> Verify the car turned right\n")

@@ -18,7 +18,7 @@ root.geometry("+500+250")
 
 def loadFile():
     print("Loading the file...")
-    root.filename = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = ftypes)
+    root.filename = filedialog.askopenfilename(initialdir = "/Users/aileen/Desktop", title = "Select file", filetypes = ftypes)
     print(root.filename)
     displayFilename(root.filename)
     viewFile(root.filename)
